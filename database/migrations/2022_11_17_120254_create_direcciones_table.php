@@ -15,6 +15,7 @@ return new class extends Migration
     {
         Schema::create('direcciones', function (Blueprint $table) {
             $table->id();
+            $table->string('calle');
             $table->integer('numero');
             $table->integer('codPostal');
             $table->string('municipio');
