@@ -2,7 +2,8 @@
 
 @section('content')
 <h1>Crear Usuario</h1>
-    <form action=# method=''> 
+    <form action='/usuarios' method='post'> 
+    @csrf
         <label for="nombre">Nombre</label><br>
         <input type="texto" name="nombre" placeholder="nombre"><br>
         <label for="apellido">Apellido</label><br>

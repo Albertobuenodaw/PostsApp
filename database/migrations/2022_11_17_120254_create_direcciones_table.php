@@ -19,14 +19,13 @@ return new class extends Migration
             $table->integer('numero');
             $table->integer('codPostal');
             $table->string('municipio');
+            /**Declaramos idUsuario ocmo id unsignedBigInteger*/
             $table->unsignedBigInteger('idUsuario')->nullable();
+            /*Indicamos que este id es foreign key*/
             $table->foreign('idUsuario')->references('id')->on('usuarios');
             $table->timestamps();
-
-             
         });
     }
-
     /**
      * Reverse the migrations.
      *

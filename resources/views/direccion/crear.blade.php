@@ -3,6 +3,7 @@
 @section('content')
 <h1>Crear Dirección</h1>
     <form action=# method=''> 
+    @csrf
         <label for="nombre">Calle</label><br>
         <input type="texto" name="calle" placeholder="calle"><br>
 

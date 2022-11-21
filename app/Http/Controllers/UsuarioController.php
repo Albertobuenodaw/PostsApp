@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Usuario;
+use App\Models\Direccion;
 
 class UsuarioController extends Controller
 {
@@ -15,7 +17,6 @@ class UsuarioController extends Controller
     {
         //
     }
-
     /**
      * Show the form for creating a new resource.
      *
@@ -25,7 +26,6 @@ class UsuarioController extends Controller
     {
         //
     }
-
     /**
      * Store a newly created resource in storage.
      *
@@ -33,14 +33,12 @@ class UsuarioController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
-    {
-        $usuario = new Usuario();
+    {   
+        $usuario = new Usuario;
         $usuario->nombre= $request->nombre;
         $usuario->apellido= $request->apellido;
         $usuario->save();
-
-        redirect()->route('usuario/create');
-
+        return redirect()->route('usuario-store');
     }
 
     /**
@@ -76,7 +74,6 @@ class UsuarioController extends Controller
     {
         //
     }
-
     /**
      * Remove the specified resource from storage.
      *
@@ -85,6 +82,14 @@ class UsuarioController extends Controller
      */
     public function destroy($id)
     {
+        //
+    }
+
+    public function showAsignar()
+    {   
+        $usuarios = Usuario::all();
+        $direcciones = Direccion::all();
+        return view ('usuario.asignar')->with('usuarios', $usuarios)->with('direcciones', $direcciones);
         //
     }
 }

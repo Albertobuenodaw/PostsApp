@@ -10,13 +10,13 @@
 <body>
     <ul>
         <li>
-            <a href="/usuario/crear">Añadir Usuario</a>
+            <a href="/usuarios">Añadir Usuario</a>
         </li>
         <li>
             <a href="/direccion/crear">Añadir Dirección</a>
         </li>
         <li>
-            <a href="/usuario/asignar">Asignar Dirección a Usuario</a>
+            <a href="/asignar">Asignar Dirección a Usuario</a>
         </li>
     </ul>
     <hr>
