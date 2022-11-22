@@ -40,6 +40,22 @@ class UsuarioController extends Controller
         $usuario->save();
         return redirect()->route('usuario-store');
     }
+     /**
+     * Store a newly created resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\Response
+     */
+    public function storeDireccion(Request $request)
+    {   
+        $direccion = new Direccion;
+        $direccion->calle= $request->calle;
+        $direccion->numero= $request->numero;
+        $direccion->codPostal= $request->codPostal;
+        $direccion->municipio= $request->municipio;
+        $direccion->save();
+        return redirect()->route('direccion-store');
+    }
 
     /**
      * Display the specified resource.

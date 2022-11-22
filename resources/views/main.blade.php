@@ -13,7 +13,7 @@
             <a href="/usuarios">Añadir Usuario</a>
         </li>
         <li>
-            <a href="/direccion/crear">Añadir Dirección</a>
+            <a href="/direccion">Añadir Dirección</a>
         </li>
         <li>
             <a href="/asignar">Asignar Dirección a Usuario</a>

@@ -16,4 +16,8 @@ class Direccion extends Model
         'municipio',
         'idUsuario'
     ];
+
+    public function direction(){
+        return $this->belongsTo('App\Models\Model', 'idUsuario');
+    } 
 }
