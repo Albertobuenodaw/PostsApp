@@ -15,7 +15,7 @@ return new class extends Migration
     {
         Schema::create('posts', function (Blueprint $table) {
             $table->id();
-            $table->string('titulo');
+            $table->string('titulo')->nullable();
             $table->string('contenido')->nullable();
             /**Declaramos idUsuario como id unsignedBigInteger*/
             $table->unsignedBigInteger('idUsuario');
