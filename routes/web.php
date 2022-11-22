@@ -15,9 +15,12 @@ use App\Http\Controllers\UsuarioController;
 |
 */
 Route::get('/', function () {return view('index');});
-Route::get('/usuarios', function(){return view ('usuario.crear');})->name('usuario');
-Route::post('/usuarios', [UsuarioController::class , 'store'])->name('usuario-store');
-Route::get('/asignar', [UsuarioController::class, 'showAsignar']);
+Route::get('/usuarios', function(){return view ('usuario.crear');})->name( 'usuario' );
+Route::post('/usuarios', [UsuarioController::class , 'store'])->name( 'usuario-store' );
+
+Route::get('/asignar', [UsuarioController::class, 'showAsignar'])->name( 'show-asignar' );
+Route::post('/asignar', [UsuarioController::class, 'asignar'])->name( 'asignar' );
+
 Route::get('/direccion', function () {return view('direccion.crear');})->name('direccion-show');
 Route::post('/direccion', [UsuarioController::class, 'storeDireccion'])->name('direccion-store');
 

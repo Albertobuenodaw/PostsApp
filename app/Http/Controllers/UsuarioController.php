@@ -40,6 +40,7 @@ class UsuarioController extends Controller
         $usuario->save();
         return redirect()->route('usuario-store');
     }
+    
      /**
      * Store a newly created resource in storage.
      *
@@ -105,7 +106,7 @@ class UsuarioController extends Controller
     {   
         $usuarios = Usuario::all();
         $direcciones = Direccion::all();
-        return view ('usuario.asignar')->with('usuarios', $usuarios)->with('direcciones', $direcciones);
+        return view('usuario.asignar')->with('usuarios',$usuarios)->with('direcciones', $direcciones);
         //
     }
 }

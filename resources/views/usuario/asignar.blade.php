@@ -1,21 +1,22 @@
 @extends('main')
 
 @section('content')
+
 <h1>Asignar Usuario</h1>
-    <form action=# method=''> 
+    <form action='{{route("asignar")}}' method='post'> 
         @csrf
         <select>
                 @foreach ($usuarios as $usuario)
-                <option>{{$usuario->name}}</option>
+                <option>{{$usuario->nombre}}</option>
                 @endforeach
         </select>
 
         <select>
             @foreach ($direcciones as $direccion )
-            <option>{{$direccion->name}}</option>
+            <option>{{$direccion->calle}}</option>
             @endforeach
-        </select>
+        </select><br>
 
-        <submit>
+        <input type=submit value="Asignar">
     </form>
 @endsection
