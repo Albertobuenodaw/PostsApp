@@ -24,6 +24,9 @@ Route::post('/asignar', [UsuarioController::class, 'asignar'])->name( 'asignar' 
 Route::get('/direccion', function () {return view('direccion.crear');})->name('direccion-show');
 Route::post('/direccion', [UsuarioController::class, 'storeDireccion'])->name('direccion-store');
 
+Route::get('/posts', [UsuarioController::class, 'postsIndex'])->name('posts-index');
+Route::post('/posts', [UsuarioController::class, 'storePosts'])->name('posts-store');
+
 
 
 

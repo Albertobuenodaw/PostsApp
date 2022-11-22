@@ -14,7 +14,7 @@ class Usuario extends Model
     ];
 
     public function direccion(){
-        return $this->hasOne('App\Models\Direccion');
+        return $this->hasOne('App\Models\Direccion', 'idUsuario');
     }
     
     public function posts(){

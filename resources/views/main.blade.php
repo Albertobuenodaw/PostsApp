@@ -18,6 +18,9 @@
         <li>
             <a href="/asignar">Asignar Dirección a Usuario</a>
         </li>
+        <li>
+            <a href="{{route('posts-index')}}">Escribir Posts</a>
+        </li>
     </ul>
     <hr>
     @yield('content')

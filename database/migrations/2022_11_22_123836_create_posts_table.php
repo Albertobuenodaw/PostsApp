@@ -15,14 +15,17 @@ return new class extends Migration
     {
         Schema::create('posts', function (Blueprint $table) {
             $table->id();
+            $table->string('titulo');
+            $table->string('contenido')->nullable();
+            /**Declaramos idUsuario como id unsignedBigInteger*/
+            $table->unsignedBigInteger('idUsuario');
+            /*Indicamos que este id es foreign key*/
+            $table->foreign('idUsuario')->references('id')->on('usuarios');
             $table->timestamps();
-
-             /**Declaramos idUsuario como id unsignedBigInteger*/
-             $table->unsignedBigInteger('idUsuario');
-             /*Indicamos que este id es foreign key*/
-             $table->foreign('idUsuario')->references('id')->on('usuarios');
         });
     }
+    
+
 
     /**
      * Reverse the migrations.
