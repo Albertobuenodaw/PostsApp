@@ -12,7 +12,7 @@
             color:white;
             border:none;
             border-radius: 5px;
-            box-shadow: 2px 2px 10px grey;
+            box-shadow: 2px 2px 10px #D0D0D0;
             margin-top: 14px;
         }
     </style>
