@@ -35,6 +35,12 @@
                 
             </tr>
         @endforeach
+
+        <form action='{{route('show-posts')}}' method='GET'>
+            @foreach ($posts as $post )
+                <p>{{ $post->content }}</p>
+            @endforeach
+        </form>
        
     <table>
 @endsection

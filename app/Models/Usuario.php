@@ -14,6 +14,12 @@ class Usuario extends Model
     ];
 
     public function direccion(){
-        return $this->hasOne('App\Models\Direccion', 'idDireccion');
-    } 
+        return $this->hasOne('App\Models\Direccion');
+    }
+    
+    public function posts(){
+        return $this->hasMany('App\Models\Post');
+    }
+
+    
 }

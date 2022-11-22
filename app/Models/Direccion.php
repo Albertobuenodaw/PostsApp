@@ -10,7 +10,7 @@ class Direccion extends Model
     use HasFactory;
 
     protected $table = 'direcciones';
-    
+
     protected $fillable = [
         'calle',
         'numero',
@@ -19,7 +19,7 @@ class Direccion extends Model
         'idUsuario'
     ];
 
-    public function direction(){
+    public function usuario(){
         return $this->belongsTo('App\Models\Usuario', 'idUsuario');
     } 
 }

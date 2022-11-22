@@ -13,4 +13,8 @@ class Post extends Model
         'texto',
         'idUsuario',
     ];
+    
+    public function usuario(){
+        return $this->belongsTo('App\Models\Usuario', 'idUsuario');
+    } 
 }
