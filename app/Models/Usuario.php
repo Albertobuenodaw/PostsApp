@@ -13,7 +13,7 @@ class Usuario extends Model
         'apellido'  
     ];
 
-    public function direction(){
-        return $this->hasOne('App\Models\Direccion', 'idUsuario');
+    public function direccion(){
+        return $this->hasOne('App\Models\Direccion', 'idDireccion');
     } 
 }

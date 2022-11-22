@@ -8,7 +8,9 @@ use Illuminate\Database\Eloquent\Model;
 class Direccion extends Model
 {
     use HasFactory;
+
     protected $table = 'direcciones';
+    
     protected $fillable = [
         'calle',
         'numero',
@@ -18,6 +20,6 @@ class Direccion extends Model
     ];
 
     public function direction(){
-        return $this->belongsTo('App\Models\Model', 'idUsuario');
+        return $this->belongsTo('App\Models\Usuario', 'idUsuario');
     } 
 }

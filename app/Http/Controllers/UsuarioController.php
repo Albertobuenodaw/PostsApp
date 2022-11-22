@@ -109,4 +109,18 @@ class UsuarioController extends Controller
         return view('usuario.asignar')->with('usuarios',$usuarios)->with('direcciones', $direcciones);
         //
     }
+
+    public function asignar(Request $request)
+    {   
+        $id_usuario = $request->get('usuario');
+        $id_direccion = $request->get('direccion');
+
+        $usuario =  Usuario::find($id_usuario);
+        $direccion = Direccion::find($id_direccion);
+
+        $usuario->direccion()->save($direccion);
+        return redirect()->route('asignar');
+        //
+
+    }
 }
