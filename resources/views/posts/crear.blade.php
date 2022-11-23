@@ -11,22 +11,21 @@
                     @endforeach
                 </select><br>
                 <textarea name="contenido" rows=5 cols="60" style="resize:none; margin-top: 10px;" ></textarea><br>
-                <input class="button" type="submit" value="Post this">
+                <input class="blueButton" type="submit" value="Post this">
+        </form>
+        <form action='{{route('usersPosts')}}' method='get' >
+        <input type='submit' value= 'Ver posts por usuario' style = 'margin-top:12px;'>
         </form>
         <hr>
     <!------------------------------------------------------------>
-            <h2>Posts realizados</h2>
-            @if(empty($posts))
-
-                <span class='warning'>No existen Posts aún</span>
-
-            @endif
-
-            @foreach( $posts as $post )
-
-                    <h5 >{{$post->usuario->nombre}}</h5>
-                    <p>{{$post->contenido}}</p>
-                
-            @endforeach
+        <h2>Todos los Posts realizados</h2>
+        @foreach( $posts as $post )
+                <form>
+                    <h5>{{$post->usuario->nombre}}</h5>
+                    <p>{{$post->contenido}}</p><br>
+                    <input type = 'submit' class ='editBtn' value = 'Edit'>
+                    <input type = 'submit' class ='deleteBtn' value = 'Delete'>
+                </form>
+        @endforeach
     </div>
 @endsection

@@ -16,7 +16,7 @@
 
             <label for="numero">Codigo Postal</label><br>
             <input type="texto" name="codPostal" placeholder="codPostal"><br>
-            <input type="submit" value="Enviar"> 
+            <input type="submit" class='blueButton' value="+ Añadir Direccion"> 
         </form>
     </div>
 @endsection

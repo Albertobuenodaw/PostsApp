@@ -27,6 +27,8 @@ Route::post('/direccion', [UsuarioController::class, 'storeDireccion'])->name('d
 Route::get('/posts', [UsuarioController::class, 'postsIndex'])->name('posts-index');
 Route::post('/posts', [UsuarioController::class, 'storePosts'])->name('posts-store');
 
+Route::get('/usersPosts',[UsuarioController::class, 'usersPosstIndex'])->name('usersPosts');
+
 
 
 

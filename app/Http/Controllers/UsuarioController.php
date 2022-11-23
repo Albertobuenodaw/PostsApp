@@ -102,4 +102,11 @@ class UsuarioController extends Controller
         return redirect()->route('posts-store');
         
     }
+
+    public function usersPostsIndex(){
+        $usuarios = Usuario::all();
+        $posts = Post::all();
+        return view('posts.usuarios')->with('usuarios',$usuarios)->with('posts', $posts);
+
+    }
 }

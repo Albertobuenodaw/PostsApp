@@ -16,7 +16,7 @@
                 <option value="{{$direccion->id}}">{{$direccion->calle}}</option>
                 @endforeach
             </select><br>
-            <input type=submit value="Asignar">
+            <input class = 'blueButton' type=submit value="Asignar">
         </form>
         <hr>
         <table>
