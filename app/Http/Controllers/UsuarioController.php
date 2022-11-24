@@ -91,12 +91,12 @@ class UsuarioController extends Controller
 
     public function storePosts(Request $request){
         $id_usuario = $request->get('usuario');
-        $contenido = $request->get('contenido');
-        
+            
         $usuario =  Usuario::find($id_usuario);
 
         $post = New Post();
-        $post->contenido = $contenido;
+        $post->contenido = $request->get('contenido');
+        $post->titulo = $request->get('titulo');
 
         $usuario->posts()->save($post);
         return redirect()->route('posts-store');

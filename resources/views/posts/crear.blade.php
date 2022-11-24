@@ -11,6 +11,19 @@
                     <option value="{{$usuario->id}}">{{$usuario->nombre}}</option> 
                     @endforeach
                 </select><br>
+
+                <label for='tema'>Tema</label><br>
+                <select name='tema'>
+                    <option selected disabled="true">-select your topic</option>
+                    <option value="1">Informática</option>
+                    <option value="2">Ornitología</option> 
+                    <option value="3">Manga</option> 
+                    <option value="4">Filosofía Griega</option> 
+                    <option value="5">Animales marinos</option>  
+                </select><br>
+
+                <input type ='text' name = 'titulo' class = 'lightRounded titulo' placeholder = 'Titulo'><br>
+                    
                 <textarea name="contenido" rows=5 cols="60" style="resize:none; margin-top: 10px;" placeholder="Contenido del post..." ></textarea><br>
                 <input class="greyBlueBtn" type="submit" value="Post this">
         </form>

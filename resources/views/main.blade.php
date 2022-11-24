@@ -97,8 +97,8 @@
         .postfield{
             margin-top: 20px;
             border-radius: 20px;
-            background-color: #7F8C8D;
-            /*background-color: #383c44;*/
+            /*background-color: #7F8C8D;*/
+            background-color: #444c54;
             padding: 15px;
             padding-top: 30px;
             padding-left: 50px;
@@ -108,6 +108,8 @@
             -webkit-border-radius: 10px;
             -moz-border-radius: 10px;
             border-radius: 10px;
+            /*background-color: #F2F3F4;*/
+            color:#797D7F;
         }
         .grayBtn:hover{
             border: 2px solid white;   
@@ -138,10 +140,6 @@
             border-color: #2471A3;
         }
      
-        textarea{
-            background-color: #F2F3F4;
-            color:#797D7F;
-        }
         .postContent{
             background-color: #F2F3F4;
             color:#797D7F;
@@ -201,6 +199,9 @@
         }
         .author{
             color: whiteSmoke;
+        }
+        .titulo{
+            margin-top: 10px;
         }
        
         /******************************* */
