@@ -117,6 +117,15 @@ class UsuarioController extends Controller
     }
 
     public function updatePost(Request $request, $id){
+        $post = Post::findOrFail($id);
+        $post->contenido = $request->nuevoContenido;
+        $post->save();
+        return redirect()->route('posts-store');
+    }
+
+    public function editPost($id){
+        $post = Post::findOrFail($id);
         
+        return view ('posts.editar')->with('post' , $post);
     }
 }

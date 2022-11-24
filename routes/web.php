@@ -27,7 +27,8 @@ Route::post('/direccion', [UsuarioController::class, 'storeDireccion'])->name('d
 Route::get('/posts', [UsuarioController::class, 'postsIndex'])->name('posts-index');
 Route::post('/posts', [UsuarioController::class, 'storePosts'])->name('posts-store');
 Route::delete('/posts/{id}',[UsuarioController::class , 'deletePost'])->name('delete-post');
-Route::patch('/posts/{id}',[UsuarioController::class , 'updatePost'])->name('update-post');
+Route::patch('/posts/{id}',[UsuarioController::class , 'updatePost'])->name('update-post');//NO ME DEJA METERLE PATCH
+Route::get('/post/edit/{id}', [UsuarioController::class , 'editPost'])->name('edit-post');
 
 Route::get('/usersPosts',[UsuarioController::class, 'usersPostsIndex'])->name('usersPosts');
 

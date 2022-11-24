@@ -8,20 +8,20 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <style>
         .blueButton{
-            background-color: SkyBlue;
+            background-color: #34495E;
             color:white;
-            border:none;
+            border: 1px solid grey;
             border-radius: 5px;
-            box-shadow: 2px 2px 10px #D0D0D0;
+            /*box-shadow: 2px 2px 10px #D0D0D0;*/
             margin-top: 14px;
         }
 
         .grayBtn{
             background-color: #85929E;
             color:white;
-            border:none;
+            border: 1px solid grey;
             border-radius: 5px;
-            box-shadow: 2px 2px 10px #85929E;
+           /* box-shadow: 2px 2px 10px #85929E;*/
         }
 
         .editBtn{
@@ -61,15 +61,40 @@
             color:white;
             border:none;
             border-radius: 5px;
-            box-shadow: 2px 2px 10px #2471A3  ;
-       
         }
         .postfield{
             margin-top: 20px;
             border-radius: 5px;
-            background-color: #D6DBDF;
+            background-color: #7F8C8D;
             padding: 15px;
         }
+        textarea{
+            -webkit-border-radius: 10px;
+            -moz-border-radius: 10px;
+            border-radius: 10px;
+        }
+        .grayBtn:hover{
+            border: 2px solid white;   
+        }
+        .darkBlueBtn:hover{
+            border: 2px solid white;
+        }
+        .deleteBtn:hover{
+            border: 2px solid white;
+        }
+        .editBtn:hover{
+            border: 2px solid white;
+        }
+        .blueButton:hover{
+            border: 2px solid white;
+        }
+        body {
+            background-color: #3D3D3D
+        }
+        h1,h2,h3,h4,label,th,td{
+            color: white;
+        }
+       
     </style>
 </head>
 <body>

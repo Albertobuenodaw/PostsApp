@@ -24,8 +24,7 @@
                     <h5>{{$post->usuario->nombre}}</h5>
                     <p class = "postContent" >{{$post->contenido}}</p><br>
                     <div class='row'>
-                        <form action="" method="post">
-                        @method('patch')
+                        <form action="{{route('edit-post', $post->id)}}" method="get">
                         @csrf
                             <input type = 'submit' class ='editBtn' value = 'Edit'>
                         </form>
