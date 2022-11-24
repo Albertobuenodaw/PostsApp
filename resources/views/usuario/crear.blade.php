@@ -1,15 +1,15 @@
 @extends('main')
 
 @section('content')
-<div class='container mx-auto w-80'>
+<div class='container  w-80'>
     <h1>Crear Usuario</h1>
         <form action='/usuarios' method='post'> 
         @csrf
             <label for="nombre">Nombre</label><br>
-            <input type="texto" name="nombre" placeholder="nombre"><br>
+            <input class="lightRounded" type="texto" name="nombre" placeholder="nombre"><br>
             <label for="apellido">Apellido</label><br>
-            <input type="texto" name="apellido" placeholder="apellido"><br>
-            <input type="submit" class = 'blueButton' value="+ Añadir Usuario"> 
+            <input class="lightRounded" type="texto" name="apellido" placeholder="apellido"><br>
+            <input type="submit" class = 'darkBlueBtn' value="+ Añadir Usuario"> 
         </form>
 </div>
 @endsection

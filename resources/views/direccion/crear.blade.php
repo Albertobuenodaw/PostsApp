@@ -6,17 +6,17 @@
         <form action='/direccion' method='post'> 
         @csrf
             <label for="nombre">Calle</label><br>
-            <input type="texto" name="calle" placeholder="calle"><br>
+            <input class="lightRounded" type="texto" name="calle" placeholder="calle"><br>
 
             <label for="numero">Numero</label><br>
-            <input type="number" name="numero" placeholder="numero"><br>
+            <input class="lightRounded" type="number" name="numero" placeholder="numero"><br>
 
             <label for="numero">Municipio</label><br>
-            <input type="texto" name="municipio" placeholder="municpio"><br>
+            <input class="lightRounded" type="texto" name="municipio" placeholder="municpio"><br>
 
             <label for="numero">Codigo Postal</label><br>
-            <input type="texto" name="codPostal" placeholder="codPostal"><br>
-            <input type="submit" class='blueButton' value="+ Añadir Direccion"> 
+            <input class="lightRounded" type="texto" name="codPostal" placeholder="codPostal"><br>
+            <input type="submit" class='darkBlueBtn' value="+ Añadir Direccion"> 
         </form>
     </div>
 @endsection
