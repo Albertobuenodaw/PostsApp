@@ -5,7 +5,8 @@
         @method('PATCH')
         @csrf
             <h2>{{ $post->usuario->nombre }}</h2>
-            <textarea name = "nuevoContenido"  rows = 5 cols = "60" style = "resize:none; margin-top: 10px;" >{{$post->contenido}}</textarea><br>
+            <input type ='text' name='titulo' class = 'lightRounded textEdited' value = '{{ $post->titulo }}'><br>
+            <textarea name = "nuevoContenido"  rows = 5 cols = "60"  class= 'textEdited' >{{$post->contenido}}</textarea><br>
             <input class="grayBtn" type = 'submit' value = 'Enviar'>
         </form>
     </div>

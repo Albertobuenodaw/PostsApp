@@ -24,7 +24,7 @@
 
                 <input type ='text' name = 'titulo' class = 'lightRounded titulo' placeholder = 'Titulo'><br>
                     
-                <textarea name="contenido" rows=5 cols="60" style="resize:none; margin-top: 10px;" placeholder="Contenido del post..." ></textarea><br>
+                <textarea name="contenido" rows=5 cols="60"  placeholder="Contenido del post..." ></textarea><br>
                 <input class="greyBlueBtn" type="submit" value="Post this">
         </form>
        
@@ -40,6 +40,7 @@
                     <div class="bubblePost">
                         <!--<span class = 'date'>{{$post->updated_at}}</span>-->
                         <!--<span class = 'categoria'>{{$post->updated_at}}</span>-->
+                        <div class='row'><span class = 'bubbleLabel'>Titulo: &nbsp</span><p class='textEdited'> {{$post->titulo}}</p></div>
                         <p class = "postContent" >{{$post->contenido}}</p><br>
                 
                         <div class='row'>

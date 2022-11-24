@@ -105,11 +105,12 @@
             padding-right: 50px;
         }
         textarea{
+            resize:none; 
+            margin-top: 10px;
             -webkit-border-radius: 10px;
             -moz-border-radius: 10px;
             border-radius: 10px;
             /*background-color: #F2F3F4;*/
-            color:#797D7F;
         }
         .grayBtn:hover{
             border: 2px solid white;   
@@ -194,6 +195,9 @@
         .lightRounded{
             border-radius: 5px;
         }
+        .textEdited{
+           color: #797D7F;
+        }
         .postsVacios{
             color:#E7D5E1;
         }
@@ -203,6 +207,10 @@
         .titulo{
             margin-top: 10px;
         }
+        .titulillo{
+            color: yellow;
+        }
+
        
         /******************************* */
 
