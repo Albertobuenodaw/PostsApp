@@ -15,28 +15,61 @@
             box-shadow: 2px 2px 10px #D0D0D0;
             margin-top: 14px;
         }
+
+        .grayBtn{
+            background-color: #85929E;
+            color:white;
+            border:none;
+            border-radius: 5px;
+            box-shadow: 2px 2px 10px #85929E;
+        }
+
         .editBtn{
             background-color: #73C6B6;
             color:white;
             border:none;
             border-radius: 5px;
-            box-shadow: 2px 2px 10px #73C6B6;
+            margin-left:10px;
         }
         .deleteBtn{
             background-color: #F1948A ;
             color:white;
             border:none;
             border-radius: 5px;
-            box-shadow: 2px 2px 10px #F1948A ;
+          
+            margin-left:10px;
        
         }
         p{
             margin-bottom: 0px;
         }
+
+        .postContent{
+            background-color: white;
+            padding-left:5px;
+            padding-top:5px ;
+            padding-bottom:20px;
+            border-radius: 5px;
+        }
+
         .post{
             margin-top: 10px;
         }
 
+        .darkBlueBtn{
+            background-color: #2471A3  ;
+            color:white;
+            border:none;
+            border-radius: 5px;
+            box-shadow: 2px 2px 10px #2471A3  ;
+       
+        }
+        .postfield{
+            margin-top: 20px;
+            border-radius: 5px;
+            background-color: #D6DBDF;
+            padding: 15px;
+        }
     </style>
 </head>
 <body>

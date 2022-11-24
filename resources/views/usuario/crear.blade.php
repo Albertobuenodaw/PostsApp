@@ -1,7 +1,7 @@
 @extends('main')
 
 @section('content')
-<div class='container'>
+<div class='container mx-auto w-80'>
     <h1>Crear Usuario</h1>
         <form action='/usuarios' method='post'> 
         @csrf

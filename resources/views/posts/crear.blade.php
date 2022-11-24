@@ -1,6 +1,6 @@
 @extends('main')
 @section ('content')
-    <div class="container">
+    <div class="container mx-auto">
         <h2>Escribe tu Post</h2>
         <form action = '{{route('posts-store')}}' method = 'post'>
         @csrf
@@ -14,18 +14,29 @@
                 <input class="blueButton" type="submit" value="Post this">
         </form>
         <form action='{{route('usersPosts')}}' method='get' >
-        <input type='submit' value= 'Ver posts por usuario' style = 'margin-top:12px;'>
+        <input type='submit' value= 'Ver posts por usuario' class="darkBlueBtn" style = 'margin-top:12px;'>
         </form>
         <hr>
     <!------------------------------------------------------------>
         <h2>Todos los Posts realizados</h2>
         @foreach( $posts as $post )
-                <form>
+                <div class="postfield">
                     <h5>{{$post->usuario->nombre}}</h5>
-                    <p>{{$post->contenido}}</p><br>
-                    <input type = 'submit' class ='editBtn' value = 'Edit'>
-                    <input type = 'submit' class ='deleteBtn' value = 'Delete'>
-                </form>
+                    <p class = "postContent" >{{$post->contenido}}</p><br>
+                    <div class='row'>
+                        <form action="" method="post">
+                        @method('patch')
+                        @csrf
+                            <input type = 'submit' class ='editBtn' value = 'Edit'>
+                        </form>
+                        <form action="{{route('delete-post', $post->id)}}" method="post">
+                        @method('delete')
+                        @csrf
+                            <input type = 'submit' class ='deleteBtn' value = 'Delete'>
+                        </form>
+                    </div>
+                    
+                </div>
         @endforeach
     </div>
 @endsection

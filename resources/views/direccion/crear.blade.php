@@ -1,7 +1,7 @@
 @extends('main')
 
 @section('content')
-    <div class="container">
+    <div class="container mx-auto">
     <h1>Crear Dirección</h1>
         <form action='/direccion' method='post'> 
         @csrf

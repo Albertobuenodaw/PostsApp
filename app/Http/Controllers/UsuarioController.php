@@ -107,6 +107,16 @@ class UsuarioController extends Controller
         $usuarios = Usuario::all();
         $posts = Post::all();
         return view('posts.usuarios')->with('usuarios',$usuarios)->with('posts', $posts);
+    }
 
+    public function deletePost($id){
+        $post = Post::findOrFail($id);
+        $post->delete();
+
+        return redirect()->route('posts-store');
+    }
+
+    public function updatePost(Request $request, $id){
+        
     }
 }
