@@ -9,21 +9,21 @@
                 @csrf 
                         <div class='row selects'>
                             <select name="usuario" class="col-md-5 form-select">
-                                <option selected disabled="true">Open this select menu</option>
+                                <option selected disabled="true">--selecciona un Usuario para asignar</option>
                                 @foreach ($usuarios as $usuario)
                                 <option value="{{$usuario->id}}">{{$usuario->nombre}}</option>
                                 @endforeach
                             </select>
                             <div class='col-md-2'></div>
                             <select name="direccion" class="col-md-5 form-select" >
-                                <option selected disabled="true">Open this select menu</option>
+                                <option selected disabled="true">--selecciona una Direccion para asignar</option>
                                 @foreach ($direcciones as $direccion )
                                 <option value="{{$direccion->id}}">{{$direccion->calle}}</option>
                                 @endforeach
                             </select>
                         </div>
                         <br>
-                        <input class = 'darkBlueBtn col-md-12' type=submit value="Asignar">
+                        <input class = 'greyBlueBtn col-md-12' type=submit value="Asignar">
                     </form>
             <hr>
             <div class = 'row'>
@@ -48,7 +48,7 @@
                             @endif
                             </td>
                             <td>
-                                <input type="submit" class="grayBtn" value="Ver Posts">
+                                <input type="submit" class="crudBtn" value="Ver Posts">
                             </td>
                         </tr>
                     @endforeach

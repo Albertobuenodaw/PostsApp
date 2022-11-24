@@ -12,7 +12,7 @@
                     @endforeach
                 </select><br>
                 <textarea name="contenido" rows=5 cols="60" style="resize:none; margin-top: 10px;" placeholder="Contenido del post..." ></textarea><br>
-                <input class="darkBlueBtn" type="submit" value="Post this">
+                <input class="greyBlueBtn" type="submit" value="Post this">
         </form>
        
         <hr>
@@ -23,7 +23,7 @@
         @endif
         @foreach( $posts as $post )
                 <div class="postfield">
-                    <h5>{{$post->usuario->nombre}}</h5>
+                    <h5 class='author'>{{$post->usuario->nombre}}</h5>
                     <div class="bubblePost">
                         <!--<span class = 'date'>{{$post->updated_at}}</span>-->
                         <!--<span class = 'categoria'>{{$post->updated_at}}</span>-->
@@ -32,12 +32,12 @@
                         <div class='row'>
                             <form action="{{route('edit-post', $post->id)}}" method="get">
                             @csrf
-                                <input type = 'submit' class ='editBtn' value = 'Edit'>
+                                <input type = 'submit' class ='crudBtn' value = 'Edit'>
                             </form>
                             <form action="{{route('delete-post', $post->id)}}" method="post">
                             @method('delete')
                             @csrf
-                                <input type = 'submit' class ='deleteBtn' value = 'Delete'>
+                                <input type = 'submit' class ='crudBtn' value = 'Delete'>
                             </form>
                         </div>
                     </div>

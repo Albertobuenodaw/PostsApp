@@ -16,7 +16,7 @@
 
             <label for="numero">Codigo Postal</label><br>
             <input class="lightRounded" type="texto" name="codPostal" placeholder="codPostal"><br>
-            <input type="submit" class='darkBlueBtn' value="+ Añadir Direccion"> 
+            <input type="submit" class='greyBlueBtn' value="+ Añadir Direccion"> 
         </form>
     </div>
 @endsection

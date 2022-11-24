@@ -9,7 +9,7 @@
             <input class="lightRounded" type="texto" name="nombre" placeholder="nombre"><br>
             <label for="apellido">Apellido</label><br>
             <input class="lightRounded" type="texto" name="apellido" placeholder="apellido"><br>
-            <input type="submit" class = 'darkBlueBtn' value="+ Añadir Usuario"> 
+            <input type="submit" class = 'greyBlueBtn' value="+ Añadir Usuario"> 
         </form>
 </div>
 @endsection
