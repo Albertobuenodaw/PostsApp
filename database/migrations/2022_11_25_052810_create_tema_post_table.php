@@ -21,10 +21,10 @@ return new class extends Migration
 
             //Creacion y referenciacion de la foreign key de posts
             $table->unsignedBigInteger('tema_id');
-            $table->foreign('tema_id')->references('id')->on('tema');
+            $table->foreign('tema_id')->references('id')->on('temas');
             
             $table->timestamps();
-            $table->unsignedBigInteger('tema_id');
+       
 
         });
     }
