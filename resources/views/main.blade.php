@@ -205,11 +205,20 @@
             color: whiteSmoke;
         }
         .titulo{
-            margin-top: 10px;
+            margin-top: 5px;
         }
-        .titulillo{
-            color: yellow;
+        .checkLabel{
+            color: whitesmoke;
+            margin-left: 5px;   
         }
+        .whiteSmoke{
+
+            color: whiteSmoke;
+        }
+        .labelCheckBox{
+            margin-top: 20px;
+        }
+        
 
        
         /******************************* */

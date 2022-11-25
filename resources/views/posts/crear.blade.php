@@ -22,6 +22,17 @@
                     <option value="5">Animales marinos</option>  
                 </select><br>
 
+                <label for='checkBoxTema' class = 'whiteSmoke labelCheckBox'>Selecciona Temas</label><br>
+                <fieldset class='whiteSmoke' class = 'tema form-check' name ='checkBoxTema'>                               
+                    <input type="checkbox" name="tema" value="Arte"><span class= 'checkLabel'>Arte</span><br>      
+                    <input type="checkbox" name="tema" value="Alimentación"><span class= 'checkLabel'>Alimentación</span><br>      
+                    <input type="checkbox" name="tema" value="Informática"><span class= 'checkLabel'>Informática</span><br> 
+                    <input type="checkbox" name="tema" value="Coches"><span class= 'checkLabel'>Coches</span><br>
+                    <input type="checkbox" name="tema" value="Informática"><span class= 'checkLabel'>Informática</span><br>   
+                    <br>      
+                </fieldset> 
+
+
                 <input type ='text' name = 'titulo' class = 'lightRounded titulo' placeholder = 'Titulo'><br>
                     
                 <textarea name="contenido" rows=5 cols="60"  placeholder="Contenido del post..." ></textarea><br>
@@ -38,15 +49,19 @@
                 <div class="postfield">
                     <h5 class='author'>{{$post->usuario->nombre}}</h5>
                     <div class="bubblePost">
-                        <!--<span class = 'date'>{{$post->updated_at}}</span>-->
-                        <!--<span class = 'categoria'>{{$post->updated_at}}</span>-->
+                       
                         <div class='row'><span class = 'bubbleLabel'>Titulo: &nbsp</span><p class='textEdited'> {{$post->titulo}}</p></div>
-                        <p class = "postContent" >{{$post->contenido}}</p><br>
-                
+                        <div class='row'><span class = 'bubbleLabel'>Temas: &nbsp
+                            @foreach ($posts->temas as $tema)
+                              </span><p class='textEdited'> {{$tema}}</p>
+                            @endforeach    
+                        </div>
+                        <span class = 'date'>{{$post->updated_at}}</span>
+                        <p class = "postContent" >{{$post->contenido}}</p><br>  
                         <div class='row'>
                             <form action="{{route('edit-post', $post->id)}}" method="get">
                             @csrf
-                                <input type = 'submit' class ='crudBtn' value = 'Edit'>
+                                <input type = ' ' class ='crudBtn' value = 'Edit'>
                             </form>
                             <form action="{{route('delete-post', $post->id)}}" method="post">
                             @method('delete')

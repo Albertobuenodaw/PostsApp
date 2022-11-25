@@ -14,6 +14,11 @@ use App\Http\Controllers\UsuarioController;
 | contains the "web" middleware group. Now create something great!
 |
 */
+
+/**
+ * 
+ */
+
 Route::get('/', function () {return view('index');});
 Route::get('/usuarios', function(){return view ('usuario.crear');})->name( 'usuario' );
 Route::post('/usuarios', [UsuarioController::class , 'store'])->name( 'usuario-store' );
