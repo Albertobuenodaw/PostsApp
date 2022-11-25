@@ -18,7 +18,7 @@ class Post extends Model
         return $this->belongsTo('App\Models\Usuario', 'idUsuario');
     } 
 
-    public function tema(){
+    public function temas(){
         return $this->belongsToMany('App\Models\Tema');
     } 
 }

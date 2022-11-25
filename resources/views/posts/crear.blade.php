@@ -53,7 +53,7 @@
                         <div class='row'><span class = 'bubbleLabel'>Titulo: &nbsp</span><p class='textEdited'> {{$post->titulo}}</p></div>
                         <div class='row'><span class = 'bubbleLabel'>Temas: &nbsp
                             @foreach ($posts->temas as $tema)
-                              </span><p class='textEdited'> {{$tema}}</p>
+                              </span><p class='textEdited'> {{$tema->tema}}</p>
                             @endforeach    
                         </div>
                         <span class = 'date'>{{$post->updated_at}}</span>

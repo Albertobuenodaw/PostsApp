@@ -15,7 +15,7 @@ return new class extends Migration
     {
         Schema::create('temas', function (Blueprint $table) {
             $table->id();
-            $table->tema();
+            $table->string('tema');
             $table->timestamps();
         });
     }
