@@ -11,4 +11,8 @@ class Tema extends Model
     protected $fillable = [
         'nombre'
     ];
+
+    public function post(){
+        return $this->belongsToMany('App\Models\Post');
+    } 
 }
