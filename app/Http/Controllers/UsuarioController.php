@@ -6,30 +6,33 @@ use Illuminate\Http\Request;
 use App\Models\Usuario;
 use App\Models\Direccion;
 use App\Models\Post;
+use App\Models\Tema;
+
 
 class UsuarioController extends Controller
 {
    
     public function index()
     {
-        //
+      return view ('index');
     }
-   
-    public function create()
+
+    public function usuariosIndex()
     {
-        //
+        return view ('usuario.crear');
     }
-   
-    public function store(Request $request)
+
+    public function usuariosStore(Request $request)
     {   
         $usuario = new Usuario;
         $usuario->nombre= $request->nombre;
         $usuario->apellido= $request->apellido;
+
         $usuario->save();
+
         return redirect()->route('usuario-store');
     }
     
- 
     public function storeDireccion(Request $request)
     {   
         $direccion = new Direccion;
@@ -37,35 +40,17 @@ class UsuarioController extends Controller
         $direccion->numero= $request->numero;
         $direccion->codPostal= $request->codPostal;
         $direccion->municipio= $request->municipio;
+
         $direccion->save();
+
         return redirect()->route('direccion-store');
-    }
-
-    
-    public function show($id)
-    {
-        
-    }
-
-    
-    public function edit($id){
-
-    }
-     
-    public function update(Request $request, $id)
-    {
-        
-    }
-   
-    public function destroy($id)
-    {
-        
     }
 
     public function showAsignar()
     {   
         $usuarios = Usuario::all();
         $direcciones = Direccion::all();
+
         return view('usuario.asignar')->with('usuarios',$usuarios)->with('direcciones', $direcciones);
         //
     }
@@ -79,6 +64,7 @@ class UsuarioController extends Controller
         $direccion = Direccion::find($id_direccion);
 
         $usuario->direccion()->save($direccion); //SAVE
+
         return redirect()->route('asignar');
     }
 
@@ -86,47 +72,64 @@ class UsuarioController extends Controller
     {   
         $usuarios = Usuario::all();
         $posts = Post::all();
+
         return view('posts.crear')->with('usuarios',$usuarios)->with('posts', $posts);
     }
 
-    public function storePosts(Request $request){
+    public function postsDeUsuario($id)
+    {
+        $usuario = Usuario::findOrFail($id);
+        return view('usuario.posts')->with('usuario',$usuario);
+    }
+
+    //pDTE corregir storePosts
+    public function storePosts(Request $request)
+    {
         $id_usuario = $request->get('usuario');
         $request->get('contenido');    
         $usuario =  Usuario::find($id_usuario);
-
 
         $post = New Post();
         $post->contenido = $request->get('contenido');
         $post->titulo = $request->get('titulo');
 
-        foreach ($request->tema as $tema){
-            $post->temas()->atach($tema);
-        }
-       
-
-        $usuario->posts()->save($post);
-        return redirect()->route('posts-store');
+      
+       foreach($request->get('temas') as $tema){
+            $nombre = $tema;
+            $nuevoTema = new Tema();
+            $nuevoTema-> nombre = $nombre;
+            $nuevoTema->save();
+            $post->temas()->attach($nuevoTema->id);     
+        };
         
+        $usuario->posts()->save($post);
+
+        return redirect()->route('posts-store');    
     }
 
-    public function usersPostsIndex(){
+    public function usersPostsIndex()
+    {
         $usuarios = Usuario::all();
         $posts = Post::all();
+
         return view('posts.usuarios')->with('usuarios',$usuarios)->with('posts', $posts);
     }
 
-    public function deletePost($id){
+    public function deletePost($id)
+    {
         $post = Post::findOrFail($id);
         $post->delete();
 
         return redirect()->route('posts-store');
     }
 
-    public function updatePost(Request $request, $id){
+    public function updatePost(Request $request, $id)
+    {
         $post = Post::findOrFail($id);
         $post->contenido = $request->get('nuevoContenido');
         $post->titulo = $request->get('titulo');
         $post->save();
+
         return redirect()->route('posts-store');
     }
 

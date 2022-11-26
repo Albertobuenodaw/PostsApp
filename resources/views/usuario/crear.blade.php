@@ -6,7 +6,7 @@
         <form action='/usuarios' method='post'> 
         @csrf
             <label for="nombre">Nombre</label><br>
-            <input class="lightRounded" type="texto" name="nombre" placeholder="nombre"><br>
+            <input class="lightRounded" type="texto" name="nombre" placeholder="nombre" required><br>
             <label for="apellido">Apellido</label><br>
             <input class="lightRounded" type="texto" name="apellido" placeholder="apellido"><br>
             <input type="submit" class = 'greyBlueBtn' value="+ Añadir Usuario"> 

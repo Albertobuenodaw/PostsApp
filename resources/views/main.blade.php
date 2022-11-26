@@ -199,7 +199,7 @@
            color: #797D7F;
         }
         .postsVacios{
-            color:#E7D5E1;
+            color:#2471A3;
         }
         .author{
             color: whiteSmoke;
@@ -234,7 +234,7 @@
                 <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                     <div class="navbar-nav">
                     <a class="nav-item nav-link" href="/usuarios">Añadir Usuario</a>
-                    <a class="nav-item nav-link" href="/direccion">Asignar Dirección a Usuario</a>
+                    <a class="nav-item nav-link" href="/direccion">Añadir Dirección </a>
                     <a class="nav-item nav-link" href="/asignar">Asignar Dirección a Usuario</a>
                     <a class="nav-item nav-link" href="{{route('posts-index')}}">Escribir Posts</a>
                     </div>

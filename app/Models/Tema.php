@@ -12,7 +12,7 @@ class Tema extends Model
         'nombre'
     ];
 
-    public function post(){
+    public function posts(){
         return $this->belongsToMany('App\Models\Post');
     } 
 }

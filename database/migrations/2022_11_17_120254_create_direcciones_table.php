@@ -15,10 +15,10 @@ return new class extends Migration
     {
         Schema::create('direcciones', function (Blueprint $table) {
             $table->id();
-            $table->string('calle');
-            $table->integer('numero');
-            $table->integer('codPostal');
-            $table->string('municipio');
+            $table->string('calle')->nullable();
+            $table->integer('numero')->nullable();
+            $table->integer('codPostal')->nullable();
+            $table->string('municipio')->nullable();
 
             /**Declaramos idUsuario ocmo id unsignedBigInteger*/
             $table->unsignedBigInteger('idUsuario')->nullable()->unique();

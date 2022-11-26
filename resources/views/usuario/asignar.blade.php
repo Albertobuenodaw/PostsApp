@@ -48,7 +48,9 @@
                             @endif
                             </td>
                             <td>
-                                <input type="submit" class="crudBtn" value="Ver Posts">
+                                <form action = "{{route('postsDeUsuario', $usuario->id) }}" method = 'get'>
+                                    <input type="submit" class="crudBtn" value="Ver Posts">
+                                <form>
                             </td>
                         </tr>
                     @endforeach

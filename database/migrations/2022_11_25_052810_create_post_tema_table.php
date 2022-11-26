@@ -13,8 +13,11 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('tema_post', function (Blueprint $table) {
-            $table->id();
+        Schema::create('post_tema', function (Blueprint $table) {
+           
+            //Definiendo clave compuesta
+            $table->primary(['post_id','tema_id']);
+
             //Creacion y referenciacion de la foreign key de posts
             $table->unsignedBigInteger('post_id');
             $table->foreign('post_id')->references('id')->on('posts');
@@ -36,6 +39,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('tema_post');
+        Schema::dropIfExists('post_tema');
     }
 };
