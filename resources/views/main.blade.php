@@ -196,6 +196,7 @@
             margin-bottom: 20px;
         }
         .lightRounded{
+            width:200px;
             border-radius: 5px;
         }
         .textEdited{
@@ -221,9 +222,14 @@
         .labelCheckBox{
             margin-top: 20px;
         }
+        .alert{
+            width:200px;
+            padding-top: 2px;
+            padding-bottom:2px;
+            margin-top:10px;
+            text-align: center;
+        }
         
-       
-       
         /******************************* */
 
     </style>

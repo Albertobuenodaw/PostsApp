@@ -18,5 +18,8 @@
             <input class="lightRounded" type="texto" name="codPostal" placeholder="codPostal"><br>
             <input type="submit" class='greyBlueBtn' value="+ Añadir Direccion"> 
         </form>
+        @if (session('message'))
+            <div class='alert alert-success'>{{ session('message') }}</div>
+        @endif
     </div>
 @endsection

@@ -30,7 +30,7 @@ class UsuarioController extends Controller
 
         $usuario->save();
 
-        return redirect()->route('usuario-store');
+        return redirect()->route('usuario-store')->with('message','Success!');
     }
     
     public function storeDireccion(Request $request)
@@ -43,7 +43,7 @@ class UsuarioController extends Controller
 
         $direccion->save();
 
-        return redirect()->route('direccion-store');
+        return redirect()->route('direccion-store')->with('message','Success!');
     }
 
     public function showAsignar()
@@ -94,9 +94,24 @@ class UsuarioController extends Controller
         $post->titulo = $request->get('titulo');
         
         $usuario->posts()->save($post);
+
         $post->temas()->attach($request->get('tema_id'));
 
         return redirect()->route('posts-store');    
+    }
+
+    public function eliminarDireccion($id){
+        $usuario =  Usuario::find($id);
+        $usuario->direccion()->delete('idUsuario');
+
+        return redirect()->route('asignar');
+    }
+
+    public function eliminarUsuario($id){
+        $usuario =  Usuario::find($id);
+        $usuario->delete();
+
+        return redirect()->route('asignar');
     }
 
     public function usersPostsIndex()

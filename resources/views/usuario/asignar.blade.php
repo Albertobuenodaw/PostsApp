@@ -48,6 +48,12 @@
                             @endif
                             </td>
                             <td>
+                                <form action = "{{route('eliminarUsuario', $usuario->id) }}" method = 'get'>
+                                    <input type="submit" class="crudBtn" value="Eliminar Usuario">
+                                <form>
+                                <form action = "{{route('eliminarDireccion', $usuario->id) }}" method = 'get'>
+                                    <input type="submit" class="crudBtn" value="Eliminar Direccion">
+                                <form>
                                 <form action = "{{route('postsDeUsuario', $usuario->id) }}" method = 'get'>
                                     <input type="submit" class="crudBtn" value="Ver Posts">
                                 <form>
