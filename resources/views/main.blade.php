@@ -169,6 +169,9 @@
         .bubblePost{
             padding-left: 20px;
         }
+        .bubbleLabel{
+            color: #AEB6BF;
+        }
         html, body {
             height: 100%;
             display: flex;
@@ -219,7 +222,7 @@
             margin-top: 20px;
         }
         
-
+       
        
         /******************************* */
 

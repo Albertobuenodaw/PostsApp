@@ -92,17 +92,9 @@ class UsuarioController extends Controller
         $post = New Post();
         $post->contenido = $request->get('contenido');
         $post->titulo = $request->get('titulo');
-
-      
-       foreach($request->get('temas') as $tema){
-            $nombre = $tema;
-            $nuevoTema = new Tema();
-            $nuevoTema-> nombre = $nombre;
-            $nuevoTema->save();
-            $post->temas()->attach($nuevoTema->id);     
-        };
         
         $usuario->posts()->save($post);
+        $post->temas()->attach($request->get('tema_id'));
 
         return redirect()->route('posts-store');    
     }

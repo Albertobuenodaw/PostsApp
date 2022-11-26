@@ -14,11 +14,11 @@
 
                 <label for='checkBoxTema' class = 'whiteSmoke labelCheckBox'>Selecciona Temas</label><br>
                 <fieldset class='whiteSmoke' class = 'tema form-check' name ='checkBoxTema'>                               
-                    <input type="checkbox" name="temas[]" value="Arte"><span class= 'checkLabel'>Arte</span><br>      
-                    <input type="checkbox" name="temas[]" value="Alimentación"><span class= 'checkLabel'>Alimentación</span><br>      
-                    <input type="checkbox" name="temas[]" value="Informática"><span class= 'checkLabel'>Informática</span><br> 
-                    <input type="checkbox" name="temas[]" value="Coches"><span class= 'checkLabel'>Coches</span><br>
-                    <input type="checkbox" name="temas[]" value="Surf"><span class= 'checkLabel'>Surf</span><br>   
+                    <input type="checkbox" name="tema_id[]" value="1"><span class= 'checkLabel'>Arte</span><br>      
+                    <input type="checkbox" name="tema_id[]" value="2"><span class= 'checkLabel'>Alimentación</span><br>      
+                    <input type="checkbox" name="tema_id[]" value="3"><span class= 'checkLabel'>Informática</span><br> 
+                    <input type="checkbox" name="tema_id[]" value="4"><span class= 'checkLabel'>Coches</span><br>
+                    <input type="checkbox" name="tema_id[]" value="5"><span class= 'checkLabel'>Surf</span><br>   
                     <br>      
                 </fieldset> 
 
@@ -42,12 +42,12 @@
                     <div class="bubblePost">
                        
                         <div class='row'><span class = 'bubbleLabel'>Titulo: &nbsp</span><p class='textEdited'> {{$post->titulo}}</p></div>
-                            <div class='row'><span class = 'bubbleLabel'>Temas: &nbsp
+                            <div ><span class = 'bubbleLabel'>Temas: &nbsp
                                 @foreach ($post->temas as $tema)
-                                </span><p class='textEdited'> {{$tema->nombre}}</p>
-                                @endforeach    
+                                    <span class='badge badge-dark'> {{$tema->nombre}}</span>
+                                @endforeach 
                             </div>
-                            <span class = 'date'>{{$post->updated_at}}</span>
+                            <!--<span class = 'date'>{{$post->updated_at}}</span>-->
                             <p class = "postContent" >{{$post->contenido}}</p><br>  
                             <div class='row'>
                                 <form action="{{route('edit-post', $post->id)}}" method="get">
