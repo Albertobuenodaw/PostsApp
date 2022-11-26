@@ -6,6 +6,10 @@
         @csrf
        <h2>{{ $post->usuario->nombre }}</h2>
             <input type ='text' name='titulo' class = 'lightRounded textEdited' value = '{{ $post->titulo }}'><br>
+            @foreach ($post->temas as $tema)
+                <span class='badge badge-dark'>  {{$tema->nombre}}</span>
+            @endforeach 
+            <br>
             <textarea name = "nuevoContenido"  rows = 5 cols = "60"  class= 'textEdited' >{{$post->contenido}}</textarea><br>
             <input class="greyBlueBtn" type = 'submit' value = 'Enviar'>
         </form>
