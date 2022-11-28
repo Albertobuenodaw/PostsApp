@@ -154,4 +154,8 @@ class UsuarioController extends Controller
 
         return redirect()->route('temas-store')->with('message','Success!');
     }
+
+    public function temaIndex(){
+        return view ('temas.index');
+    }
 }
