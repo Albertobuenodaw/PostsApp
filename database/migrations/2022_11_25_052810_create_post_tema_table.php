@@ -20,11 +20,11 @@ return new class extends Migration
 
             //Creacion y referenciacion de la foreign key de posts
             $table->unsignedBigInteger('post_id');
-            $table->foreign('post_id')->references('id')->on('posts');
+            $table->foreign('post_id')->references('id')->on('posts')->onDelete('cascade')->onUpdate('cascade');
 
             //Creacion y referenciacion de la foreign key de posts
             $table->unsignedBigInteger('tema_id');
-            $table->foreign('tema_id')->references('id')->on('temas');
+            $table->foreign('tema_id')->references('id')->on('temas')->onDelete('cascade')->onUpdate('cascade');
             
             $table->timestamps();
        
