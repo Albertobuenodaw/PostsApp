@@ -72,8 +72,11 @@ class UsuarioController extends Controller
     {   
         $usuarios = Usuario::all();
         $posts = Post::all();
+        $temas = Tema::all();
 
-        return view('posts.crear')->with('usuarios',$usuarios)->with('posts', $posts);
+      
+
+        return view('posts.crear')->with('usuarios',$usuarios)->with('posts', $posts)->with('temas', $temas);
     }
 
     public function postsDeUsuario($id)
@@ -118,8 +121,7 @@ class UsuarioController extends Controller
     {
         $usuarios = Usuario::all();
         $posts = Post::all();
-
-        return view('posts.usuarios')->with('usuarios',$usuarios)->with('posts', $posts);
+     
     }
 
     public function deletePost($id)
@@ -149,10 +151,10 @@ class UsuarioController extends Controller
     public function storeTema(Request $request){
         $tema = new Tema;
         $tema->nombre= $request->tema;
-        $tema->apellido= $request->apellido;
+
         $tema->save();
 
-        return redirect()->route('temas-store')->with('message','Success!');
+        return redirect()->route('tema-store')->with('message','Success!');
     }
 
     public function temaIndex(){

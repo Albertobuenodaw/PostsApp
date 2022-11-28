@@ -14,8 +14,8 @@
 
                 <label for='checkBoxTema' class = 'whiteSmoke labelCheckBox'>Selecciona Temas</label><br>
                 <fieldset class='whiteSmoke' class = 'tema form-check' name ='checkBoxTema'> 
-                    @foreach ( $post->$temas as $tema )
-                         <input type="checkbox" name="tema_id[]" value="{{$tema->id}}"><span class= 'checkLabel'>Arte</span><br>    
+                    @foreach ($temas as $tema )
+                         <input type="checkbox" name="tema_id[]" value="{{$tema->id}}"><span class= 'checkLabel'>{{ $tema->nombre }}</span><br>    
                     @endforeach                             
                     <br>      
                 </fieldset> 
@@ -23,7 +23,7 @@
                 <!-- 
                      <label for='checkBoxTema' class = 'whiteSmoke labelCheckBox'>Selecciona Temas</label><br>
                 <fieldset class='whiteSmoke' class = 'tema form-check' name ='checkBoxTema'> 
-                    @foreach ( $post->$temas as $tema )
+                   {{--  @foreach ( $post->$temas as $tema )
                          <input type="checkbox" name="tema_id[]" value="{{$tema->id}}"><span class= 'checkLabel'>Arte</span><br>    
                     @endforeach                             
                     <input type="checkbox" name="tema_id[]" value="1"><span class= 'checkLabel'>Arte</span><br>      
@@ -33,6 +33,7 @@
                     <input type="checkbox" name="tema_id[]" value="5"><span class= 'checkLabel'>Surf</span><br>   
                     <br>      
                 </fieldset> 
+                 --}}
                 -->
 
                 <input type ='text' name = 'titulo' class = 'lightRounded titulo' placeholder = 'Titulo'><br>
