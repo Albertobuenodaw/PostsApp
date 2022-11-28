@@ -145,4 +145,13 @@ class UsuarioController extends Controller
         
         return view ('posts.editar')->with('post' , $post);
     }
+
+    public function storeTema(Request $request){
+        $tema = new Tema;
+        $tema->nombre= $request->tema;
+        $tema->apellido= $request->apellido;
+        $tema->save();
+
+        return redirect()->route('temas-store')->with('message','Success!');
+    }
 }

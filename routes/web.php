@@ -40,6 +40,9 @@ Route::delete('/posts/{id}',[UsuarioController::class , 'deletePost'])->name('de
 Route::patch('/posts/{id}',[UsuarioController::class , 'updatePost'])->name('update-post');//NO ME DEJA METERLE PATCH
 Route::get('/post/edit/{id}', [UsuarioController::class , 'editPost'])->name('edit-post');
 
+Route::get('/temas',[UsuarioController::class , 'temaIndex'])->name('tema-index');
+Route::post('/temas',[UsuarioController::class , 'storeTema'])->name('tema-store');
+
 Route::get('/usersPosts',[UsuarioController::class, 'usersPostsIndex'])->name('usersPosts');
 
 

@@ -246,6 +246,7 @@
                     <a class="nav-item nav-link" href="/direccion">Añadir Dirección </a>
                     <a class="nav-item nav-link" href="/asignar">Asignar Dirección a Usuario</a>
                     <a class="nav-item nav-link" href="{{route('posts-index')}}">Escribir Posts</a>
+                    <a class="nav-item nav-link" href="{{route('temas-index')}}">Crear Tema</a>
                     </div>
                 </div>
             </nav>
