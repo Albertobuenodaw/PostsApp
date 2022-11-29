@@ -15,7 +15,7 @@
                 <label for='checkBoxTema' class = 'whiteSmoke labelCheckBox'>Selecciona Temas</label><br>
                 <fieldset class='whiteSmoke' class = 'tema form-check' name ='checkBoxTema'> 
                     @foreach ($temas as $tema )
-                         <input type="checkbox" name="tema_id[]" value="{{$tema->id}}"><span class= 'checkLabel'>{{ $tema->git nombre }}</span><br>    
+                         <input type="checkbox" name="tema_id[]" value="{{$tema->id}}"><span class= 'checkLabel'>{{ $tema->nombre }}</span><br>    
                     @endforeach                             
                     <br>      
                 </fieldset> 
