@@ -14,7 +14,7 @@ return new class extends Migration
     public function up()
     {
         Schema::create('usuarios', function (Blueprint $table) {
-            $table->id()->ondelete('cascade');
+            $table->id()->onDelete('cascade');
             $table->string('nombre')->nullable();
             $table->string('apellido')->nullable();
             $table->timestamps();

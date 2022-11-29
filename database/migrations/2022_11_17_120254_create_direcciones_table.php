@@ -14,7 +14,7 @@ return new class extends Migration
     public function up()
     {
         Schema::create('direcciones', function (Blueprint $table) {
-            $table->id();
+            $table->id()->onDelete('cascade');
             $table->string('calle')->nullable();
             $table->integer('numero')->nullable();
             $table->integer('codPostal')->nullable();
@@ -23,7 +23,7 @@ return new class extends Migration
             /**Declaramos idUsuario ocmo id unsignedBigInteger*/
             $table->unsignedBigInteger('idUsuario')->nullable()->unique();
             /*Indicamos que este id es foreign key*/
-            $table->foreign('idUsuario')->references('id')->on('usuarios');
+            $table->foreign('idUsuario')->references('id')->on('usuarios')->onDelete('cascade');
             
             $table->timestamps();
         });
