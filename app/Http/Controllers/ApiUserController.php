@@ -2,16 +2,19 @@
 
 namespace App\Http\Controllers;
 use App\Models\Usuario;
+
 //use Illuminate\Http\Request;
 
 class ApiUserController extends Controller
 {
     //
-    function usuariosIndex(Usuario $usuario){
-        $usuario = Usuario::find($usuario);
-        $posts = $usuario->posts()::orderBy('titulo');
+    function usuarioPostsIndex(Usuario $usuario){
+        return $usuario->posts()::orderBy('titulo');
+    }
 
-        return $posts;
+    function twelveRecentPosts (Usuario $usuario){
+        $posts = $usuario->posts();
+        return $posts::latest()->take(5)->get();
     }
 
 
