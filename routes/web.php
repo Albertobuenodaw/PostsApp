@@ -22,7 +22,7 @@ use App\Http\Controllers\UsuarioController;
 Route::get('/', [UsuarioController::class,'index'])->name('index');
 Route::get('/usuarios', [UsuarioController::class, 'usuariosIndex'])->name('usuarios-index');
 Route::post('/usuarios', [UsuarioController::class, 'usuariosStore'])->name('usuario-store');
-Route::get('/usuarios/{id}',  [UsuarioController::class, 'eliminarUsuario'])->name('eliminarUsuario');
+Route::delete('/usuarios/{id}',  [UsuarioController::class, 'eliminarUsuario'])->name('eliminarUsuario');
 
 
 Route::get('/postsDeUsuario/{id}' , [UsuarioController::class, 'postsDeUsuario'])->name('postsDeUsuario');

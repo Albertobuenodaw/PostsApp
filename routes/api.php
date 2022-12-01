@@ -25,5 +25,5 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 
 Route::get('/posts/{usuario}', [ApiUserController::class , 'usuarioPostsIndex']);
-Route::get('/recents/posts/{usuario}', [ApiUserController::class , 'twelveRecentPosts']);
+Route::get('/recents/posts/', [ApiUserController::class , 'twelveRecentPosts']);
 
